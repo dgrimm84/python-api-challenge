@@ -1,6 +1,6 @@
 # python-api-challenge
 Module 6 | Python API Challenge
-
+# Part 1 | WeatherPy
 # Discussion about the linear relationship of Latitude vs. Temperature
 
 ### Northern Hemisphere
