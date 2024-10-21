@@ -73,5 +73,12 @@
 
 # Part 2 | VacationPy
 ## Description of files for this part of the challenge
-> - The VacationPy.ipynb file calls the previously created cities.csv file, creates a dataframe from this information, 
 
+> - The VacationPy.ipynb file calls the previously created cities.csv file, creates a dataframe from this information, filters this dataframe into locations that are between 80 and 90 degrees Farhenheit, cloudiness less than 2, and wind speed less than 20 mph to display just the preferred vacation locations based on weather.  Then, this filtered dataframe is plotted into an interactive world map with dots located at each resulting city.  The size of the dot is the value of the humidity.  
+
+![Alt text](/WeatherPy/output_data/first_map_sample.png)
+
+> - Then, this dataframe is passed into the geoapify library with a radius of 10,000 meters around each latitude and longitude result.  These results are then used to find the nearest hotels to each city location.  A "Hotel Name" Column is added and the results for each of these searched are stored in the dataframe
+> - Finally, this hotel_df is passed through a final check to remove the "No Hotel was Found!" rows since we don't want to display the cities with no hotels within 10,000 meters.  Then, this final filtered hotel_df is plotted into an interactive world map with the same parameters as above, but now the user can hover over any point to display Latitude, Longitude, City, Humidity, Hotel, and Country.
+
+![Alt text](/WeatherPy/output_data/final_hotal_map_sample.png)
